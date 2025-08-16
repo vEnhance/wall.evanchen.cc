@@ -1,6 +1,7 @@
 <h5>
-    <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark">#{{ article.title }}</a>
+    <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark">{{ article.title }}
+    —
     <abbr class="published" title="{{ article.date.isoformat() }}">
         {{ article.locale_date }}
-    </abbr>
+    </abbr></a>
 </h5>
