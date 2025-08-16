@@ -45,27 +45,34 @@ help:
 	@echo '                                                                          '
 
 html:
+	mkdir -p "$(OUTPUTDIR)"
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
 
 clean:
 	[ ! -d "$(OUTPUTDIR)" ] || rm -rf "$(OUTPUTDIR)"
 
 regenerate:
+	mkdir -p "$(OUTPUTDIR)"
 	"$(PELICAN)" -r "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
 
 serve:
+	mkdir -p "$(OUTPUTDIR)"
 	"$(PELICAN)" -l "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
 
 serve-global:
+	mkdir -p "$(OUTPUTDIR)"
 	"$(PELICAN)" -l "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS) -b $(SERVER)
 
 devserver:
+	mkdir -p "$(OUTPUTDIR)"
 	"$(PELICAN)" -lr "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
 
 devserver-global:
+	mkdir -p "$(OUTPUTDIR)"
 	"$(PELICAN)" -lr "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS) -b 0.0.0.0
 
 publish:
+	mkdir -p "$(OUTPUTDIR)"
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
 
 .PHONY: html help clean regenerate serve serve-global devserver devserver-global publish
