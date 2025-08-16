@@ -1,6 +1,7 @@
 AUTHOR = "Evan Chen"
 SITENAME = "talking to a wall"
 SITEURL = ""
+SITESUBTITLE = "because adulthood is too lonely for irl friends"
 
 PATH = "content"
 
@@ -16,7 +17,9 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 THEME = "theme"
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 5
+
+SOCIAL = (("vEnhance", "https://github.com/vEnhance"),)
 
 
 # Uncomment following line if you want document-relative URLs when developing
