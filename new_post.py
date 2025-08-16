@@ -7,13 +7,14 @@ import re
 import subprocess
 import sys
 import tempfile
+from pathlib import Path
+
+CONTENT_PATH = Path(__file__).parent / "content"
 
 
 def find_next_number():
     """Find the next available number for the markdown file."""
-    pattern = os.path.join(
-        os.path.dirname(__file__), "[0-9][0-9][0-9][0-9][0-9][0-9].md"
-    )
+    pattern = str(CONTENT_PATH / "[0-9][0-9][0-9][0-9][0-9][0-9].md")
     existing_files = glob.glob(pattern)
     assert existing_files
 
@@ -55,26 +56,22 @@ def launch_editor(filepath):
 
 def save_final_file(temp_filepath, next_num):
     """Save the edited content to the final numbered file."""
-    # Read the temporary file content
     with open(temp_filepath, "r") as f:
         content = f.read()
 
-    # Generate the final filename
-    final_filename = f"{next_num:06d}.md"
-    final_filepath = os.path.join(os.path.dirname(__file__), final_filename)
+    final_filepath = CONTENT_PATH / f"{next_num:06d}.md"
 
     # Write to final file
     with open(final_filepath, "w") as f:
         f.write(content)
 
-    print(f"Created: {final_filename}")
+    print(f"Created: {final_filepath}")
 
 
 def main():
     """Main function."""
     next_num = find_next_number()
     print(f"Creating post #{next_num}")
-
     temp_file = create_temp_file(next_num)
 
     try:
