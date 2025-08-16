@@ -12,8 +12,8 @@ So I spend a lot of time at home myself now
 
 I already have a [blog that a few people read][blog],
 but I feel like everything I post on that blog must be a polished essay.
-So sometimes I just want a [wall I can talk to](https://w.wiki/F3QV).
-Kind of like something I can scribble a sentence in at a time.
+Sometimes I just want a [wall I can talk to](https://w.wiki/F3QV).
+Like, a wall I can scribble a sentence in at a time.
 
 Actually that's kind of what Twitter was supposed to be,
 but every time I open `x.com`, I die a little inside.
