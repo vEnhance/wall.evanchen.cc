@@ -7,7 +7,7 @@ Hi friend.
 If you don't know me, my name is [Evan][evan].
 I'm human, but my life aspiration is to be a cat.
 I'm not in school anymore, and I don't have an office job either.
-So I spend a lot of time at home myself now
+So I spend a lot of time at home
 [tinkering with my toys][dotfiles] and so on.
 
 I already have a [blog that a few people read][blog],
