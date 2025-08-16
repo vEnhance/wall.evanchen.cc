@@ -6,3 +6,8 @@ dependencies = [
     "pelican[markdown]>=4.11.0",
     "typogrify>=2.1.0",
 ]
+
+[dependency-groups]
+dev = [
+    "djlint>=1.36.4",
+]
