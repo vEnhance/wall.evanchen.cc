@@ -1,9 +1,6 @@
-<p>
-<small>
-<abbr class="published" title="{{ article.date.isoformat() }}">
-  {{ article.locale_date }}
-</abbr> | 
-{% include 'taglist.html' %} -- (<a href="{{ SITEURL }}/{{ article.url
-  }}" rel="bookmark">permalink</a>)
-</small>
-</p>
+<h5>
+    <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark">#{{ article.title }}</a>
+    <abbr class="published" title="{{ article.date.isoformat() }}">
+        {{ article.locale_date }}
+    </abbr>
+</h5>
