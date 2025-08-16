@@ -19,8 +19,5 @@ AUTHOR_FEED_RSS = None
 THEME = "theme"
 DEFAULT_PAGINATION = 5
 
-SOCIAL = (("vEnhance", "https://github.com/vEnhance"),)
-
-
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True

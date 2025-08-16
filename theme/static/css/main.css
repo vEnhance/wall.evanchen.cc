@@ -265,6 +265,7 @@ footer {
   float: left;
   position: fixed;
   bottom: 10px;
+  font-size: 12px;
 }
 
 @media print, screen and (max-width: 960px) {
