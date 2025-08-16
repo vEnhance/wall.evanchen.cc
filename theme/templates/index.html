@@ -2,7 +2,7 @@
 {% block content %}
     {% if articles %}
         {% for article in articles_page.object_list %}
-            {% include 'article_infos.html' %}
+            <h5>{% include 'article_infos.html' %}</h5>
             {{ article.content }}
             <hr />
         {% endfor %}
