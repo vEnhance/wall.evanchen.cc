@@ -29,5 +29,12 @@ CATEGORIES_SAVE_AS = ""
 AUTHOR_SAVE_AS = ""
 AUTHORS_SAVE_AS = ""
 
+STATIC_PATHS = [
+    "images",
+    "extra",
+]
+EXTRA_PATH_METADATA = {
+    "extra/favicon.ico": {"path": "favicon.ico"},  # and this
+}
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
