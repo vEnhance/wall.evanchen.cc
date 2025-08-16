@@ -15,15 +15,9 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
-LINKS = (
-    ("About", "https://github.com/vEnhance/wall.evanchen.cc"),
-    ("Blog", "https://blog.evanchen.cc"),
-    ("Instagram", "https://www.instagram.com/vEnhance/"),
-    ("Website", "https://web.evanchen.cc"),
-)
-
+THEME = "theme"
 DEFAULT_PAGINATION = 10
+
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
