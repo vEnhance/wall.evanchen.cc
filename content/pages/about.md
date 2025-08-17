@@ -8,16 +8,16 @@ If you don't know me, my name is [Evan][evan].
 I'm human, but my life aspiration is to be a cat.
 I'm not in school anymore, and I don't have an office job either.
 So I spend a lot of time at home
-[tinkering with my toys][dotfiles] and so on.
+[tinkering with my toys][dotfiles].
 
 I already have a [public blog][blog],
-but I feel like everything I post on that blog must be a polished essay.
+but I feel like everything there has to be a polished essay.
 Sometimes, like [Anna](https://w.wiki/F42M),
 I just want a [wall I can talk to](https://w.wiki/F3QV).
 
 Maybe that's what Twitter was meant for, but I can't stand `x.com`.
 So I decided I'd build my own, and now you're reading it.
-I hope you enjoy the [writing on the wall](https://w.wiki/F3QX).
+I hope you enjoy the [writing on the wall](https://w.wiki/F43q).
 
 [dotfiles]: https://github.com/vEnhance/dotfiles
 [evan]: https://web.evanchen.cc.
