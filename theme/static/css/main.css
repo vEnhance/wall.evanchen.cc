@@ -5,6 +5,7 @@ body {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
   font-style: normal;
+  font-size: 13pt;
   font-optical-sizing: auto;
   color: #333;
 }
@@ -56,6 +57,7 @@ h5,
 h6 {
   color: #494949;
   font-weight: bold;
+  font-size: 0.83em;
 }
 
 a {
@@ -83,7 +85,7 @@ pre {
     Lucida Console,
     Terminal;
   color: #333;
-  font-size: 12px;
+  font-size: 12pt;
 }
 
 pre {
@@ -265,13 +267,11 @@ footer {
   padding-bottom: 0px;
 }
 
-.read-more {
-  padding-bottom: 10px;
-  font-size: 14px;
-}
-
 .sub-title {
-  font-size: 14px;
+  font-family: "Coming Soon", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15pt;
 }
 
 .article-title {

@@ -1,7 +1,7 @@
 AUTHOR = "Evan Chen"
 SITENAME = "writing on a wall"
 SITEURL = ""
-SITESUBTITLE = "because adulthood is too lonely"
+SITESUBTITLE = "because adulthood is lonely"
 
 PATH = "content"
 
