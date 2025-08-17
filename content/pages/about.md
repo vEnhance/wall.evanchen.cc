@@ -10,14 +10,13 @@ I'm not in school anymore, and I don't have an office job either.
 So I spend a lot of time at home
 [tinkering with my toys][dotfiles] and so on.
 
-I already have a [blog that a few people read][blog],
+I already have a [public blog][blog],
 but I feel like everything I post on that blog must be a polished essay.
-Sometimes I just want a [wall I can talk to](https://w.wiki/F3QV).
-(Like [Anna](https://w.wiki/F42M).)
+Sometimes, like [Anna](https://w.wiki/F42M),
+I just want a [wall I can talk to](https://w.wiki/F3QV), casually.
 
-Maybe that's what Twitter was supposed to be, but I can't stand `x.com`.
-So one day I decided I'd just build my own thing, and now you're reading it.
-
+Maybe that's what Twitter was meant for, but I can't stand `x.com`.
+So I decided I'd build my own, and now you're reading it.
 I hope you enjoy the [writing on the wall](https://w.wiki/F3QX).
 
 [dotfiles]: https://github.com/vEnhance/dotfiles
