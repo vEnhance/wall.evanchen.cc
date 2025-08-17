@@ -38,3 +38,6 @@ EXTRA_PATH_METADATA = {
 }
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
+
+PAGE_URL = r"{slug}.html"
+PAGE_SAVE_AS = r"{slug}.html"
