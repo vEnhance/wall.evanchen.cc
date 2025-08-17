@@ -14,9 +14,10 @@ I already have a [public blog][blog],
 but I feel like everything there has to be a polished essay.
 Sometimes, like [Anna](https://w.wiki/F42M),
 I just want a [wall I can talk to](https://w.wiki/F3QV).
+Maybe that's what Twitter was for, but I can't stand `x.com`.
+So I decided I'd build my own wall, and now you're reading it.
 
-Maybe that's what Twitter was meant for, but I can't stand `x.com`.
-So I decided I'd build my own, and now you're reading it.
+Welcome to my slice of life.
 I hope you enjoy the [writing on the wall](https://w.wiki/F43q).
 
 [dotfiles]: https://github.com/vEnhance/dotfiles
