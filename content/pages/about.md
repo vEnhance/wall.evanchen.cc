@@ -13,7 +13,7 @@ So I spend a lot of time at home
 I already have a [public blog][blog],
 but I feel like everything I post on that blog must be a polished essay.
 Sometimes, like [Anna](https://w.wiki/F42M),
-I just want a [wall I can talk to](https://w.wiki/F3QV), casually.
+I just want a [wall I can talk to](https://w.wiki/F3QV).
 
 Maybe that's what Twitter was meant for, but I can't stand `x.com`.
 So I decided I'd build my own, and now you're reading it.
