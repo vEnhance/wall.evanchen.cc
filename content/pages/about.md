@@ -13,10 +13,9 @@ So I spend a lot of time at home
 I already have a [blog that a few people read][blog],
 but I feel like everything I post on that blog must be a polished essay.
 Sometimes I just want a [wall I can talk to](https://w.wiki/F3QV).
-Like, a wall I can scribble a sentence in at a time.
+(Like [Anna](https://w.wiki/F42M).)
 
-Actually that's kind of what Twitter was supposed to be,
-but every time I open `x.com`, I die a little inside.
+Maybe that's what Twitter was supposed to be, but I can't stand `x.com`.
 So one day I decided I'd just build my own thing, and now you're reading it.
 
 I hope you enjoy the [writing on the wall](https://w.wiki/F3QX).
