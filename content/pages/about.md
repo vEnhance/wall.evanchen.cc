@@ -20,6 +20,6 @@ So I decided I'd build my own wall, and now you're reading it.
 Welcome to my slice of life.
 I hope you enjoy the [writing on the wall](https://w.wiki/F43q).
 
-[dotfiles]: https://github.com/vEnhance/dotfiles
-[evan]: https://web.evanchen.cc.
+[dotfiles]: https://github.com/vEnhance/dotfiles/
+[evan]: https://web.evanchen.cc/
 [blog]: https://blog.evanchen.cc/
