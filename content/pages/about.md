@@ -3,6 +3,8 @@ title: About
 slug: about
 ---
 
+[![Artwork for "Writing on a wall"](images/wall-md.png)](images/wall.png)
+
 Hi friend.
 If you don't know me, my name is [Evan][evan].
 I'm human, but my life aspiration is to be a cat.
