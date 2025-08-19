@@ -3,7 +3,7 @@ title: About
 slug: about
 ---
 
-[![Artwork for "Writing on a wall"](images/wall-md.png)](images/wall.png)
+[![Artwork for "Writing on a wall". Click for full-resolution version.](images/wall-md.png)](images/wall.png)
 
 Hi friend.
 If you don't know me, my name is [Evan][evan].
