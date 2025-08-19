@@ -287,3 +287,10 @@ footer {
   float: right;
   font-size: 14px;
 }
+
+a:hover > img {
+  box-shadow: 0px 0px 35px #dddd33;
+}
+a:hover {
+  text-shadow: 0 0 9px #cc7777;
+}
