@@ -3,7 +3,11 @@ title: About
 slug: about
 ---
 
-[![Artwork for "Writing on a wall". Click for full-resolution version.](images/wall-md.png)](images/wall.png)
+[![Artwork for "Writing on a wall". Click for full-resolution version.](images/wall-md.png)][max]
+
+_Drawn in ProCreate 5.3.15. [Full-size version][max], [time-lapse][time-lapse]._
+
+---
 
 Hi friend.
 If you don't know me, my name is [Evan][evan].
@@ -25,3 +29,5 @@ I hope you enjoy the [writing on the wall](https://w.wiki/F43q).
 [dotfiles]: https://github.com/vEnhance/dotfiles/
 [evan]: https://web.evanchen.cc/
 [blog]: https://blog.evanchen.cc/
+[max]: images/wall.png
+[time-lapse]: images/time-lapse.mp4
