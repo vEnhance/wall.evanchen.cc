@@ -269,6 +269,19 @@ markdown = [
 ]
 
 [[package]]
+name = "pelican-katex"
+version = "1.8.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "docutils" },
+    { name = "pelican" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/db/59/f219ac9b1b9187dd391ce9c830e5414f3c4fa0e2fa2e58db1f34e57c616a/pelican_katex-1.8.2.tar.gz", hash = "sha256:c61eeedbfae85537ee001bc66d76e94c3b53f596e262dba3f216738bd9e97cea", size = 179211, upload-time = "2023-11-30T20:45:52.801Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/12/4f/b9fb4331f054821cb47a286523c2bc03de63f5831114e7da1cf2e47ea5a5/pelican_katex-1.8.2-py3-none-any.whl", hash = "sha256:c68b240f65ff3ce7a476d2a608cd9fb95bd9c69941231e8871256bb7cdb7d416", size = 179293, upload-time = "2023-11-30T20:45:47.849Z" },
+]
+
+[[package]]
 name = "pygments"
 version = "2.18.0"
 source = { registry = "https://pypi.org/simple" }
@@ -430,6 +443,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "pelican", extra = ["markdown"] },
+    { name = "pelican-katex" },
     { name = "typogrify" },
 ]
 
@@ -442,6 +456,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "pelican", extras = ["markdown"], specifier = ">=4.11.0" },
+    { name = "pelican-katex", specifier = ">=1.8.2" },
     { name = "typogrify", specifier = ">=2.1.0" },
 ]
 

@@ -41,3 +41,5 @@ EXTRA_PATH_METADATA = {
 
 PAGE_URL = r"{slug}.html"
 PAGE_SAVE_AS = r"{slug}.html"
+
+PLUGINS = ["pelican_katex"]
