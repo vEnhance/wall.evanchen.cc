@@ -6,7 +6,7 @@
         <meta name="keywords" content="evan chen, blog, wall" />
         <meta name="description" content="{{ SITESUBTITLE }}" />
         {# djlint:off #}
-        <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+        <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
         {# djlint:on #}
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,10 +32,11 @@
                 <div class="sub-title">
                     {% if SITESUBTITLE %}{{ SITESUBTITLE }}{% endif %}
                 </div>
-                {% include 'sidebar.html' %}
+                {% include "sidebar.html" %}
             </header>
             <section>
-                {% block content %}{% endblock %}
+                {% block content %}
+                {% endblock content %}
             </section>
             <footer>
                 <p>
