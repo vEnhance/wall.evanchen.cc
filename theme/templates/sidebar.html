@@ -1,15 +1,13 @@
 {% if DISPLAY_PAGES_ON_MENU -%}
-    <p>
-        <div class="view">
-            <a href="{{ SITEURL }}">Wall</a>
-            {% for page in pages %}
-                •
-                <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
-            {% endfor %}
+    <p class="view">
+        <a href="{{ SITEURL }}">Wall</a>
+        {% for page in pages %}
             •
-            <a href="{{ SITEURL }}/archives.html">List</a>
-            •
-            <a href="https://web.evanchen.cc">Leave</a>
-        </div>
+            <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
+        {% endfor %}
+        •
+        <a href="{{ SITEURL }}/archives.html">List</a>
+        •
+        <a href="https://web.evanchen.cc">Leave</a>
     </p>
 {% endif %}

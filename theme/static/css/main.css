@@ -139,6 +139,10 @@ header li {
   height: 30px;
 }
 
+header p.view {
+  margin-top: 10px;
+}
+
 header ul a {
   line-height: 1;
   font-size: 11px;
@@ -228,7 +232,6 @@ footer {
     padding: 0;
   }
 
-  header ul,
   header p.view {
     position: static;
   }
