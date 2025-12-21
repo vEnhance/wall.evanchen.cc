@@ -81,7 +81,8 @@ pre {
     Monaco,
     Bitstream Vera Sans Mono,
     Lucida Console,
-    Terminal;
+    Terminal,
+    monospace;
   color: #333;
   font-size: 12pt;
 }
