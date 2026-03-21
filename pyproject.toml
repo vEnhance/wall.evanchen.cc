@@ -16,4 +16,5 @@ dev = [
 ]
 
 [tool.djlint]
-profile="jinja"
+profile = "jinja"
+ignore = "J018"
