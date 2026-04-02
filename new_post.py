@@ -32,7 +32,7 @@ def find_next_number():
 def launch_editor(filepath: str):
     """Launch the editor with the given file."""
     try:
-        subprocess.run(["vim", filepath], check=True)
+        subprocess.run(["nvim", filepath], check=True)
     except subprocess.CalledProcessError as e:
         print(f"Error launching editor: {e}")
         sys.exit(1)
