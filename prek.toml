@@ -29,17 +29,12 @@ hooks = [
 
 [[repos]]
 repo = "meta"
-hooks = [
-  { id = "check-useless-excludes" },
-]
+hooks = [{id = "check-useless-excludes"}]
 
 [[repos]]
 repo = "https://github.com/astral-sh/ruff-pre-commit"
 rev = "v0.15.8"
-hooks = [
-  { id = "ruff-check" },
-  { id = "ruff-format" },
-]
+hooks = [{id = "ruff-check"}, {id = "ruff-format"}]
 
 [[repos]]
 repo = "https://github.com/djlint/djLint"
@@ -60,29 +55,12 @@ hooks = [
 [[repos]]
 repo = "https://github.com/JoC0de/pre-commit-prettier"
 rev = "v3.8.1"
-hooks = [
-  {
-    id = "prettier",
-    types_or = [
-      "css",
-      "javascript",
-      "markdown",
-      "json",
-      "toml",
-      "yaml"
-    ]
-  }
-]
+hooks = [{id = "prettier", types_or = ["css", "javascript", "json", "yaml"]}]
 
 [[repos]]
 repo = "https://github.com/codespell-project/codespell"
 rev = "v2.4.2"
-hooks = [
-  {
-    id = "codespell",
-    additional_dependencies = ["tomli"]
-  }
-]
+hooks = [{id = "codespell"}]
 
 [[repos]]
 repo = "https://github.com/astral-sh/uv-pre-commit"
@@ -91,11 +69,7 @@ hooks = [
   { id = "uv-lock" },
   {
     id = "pip-compile",
-    args = [
-      "pyproject.toml",
-      "-o",
-      "requirements.txt"
-    ]
+    args = ["pyproject.toml", "-o", "requirements.txt", "--no-annotate"]
   }
 ]
 
