@@ -30,7 +30,7 @@ pelican==4.11.0
     #   pelican-katex
 pelican-katex==1.8.2
     # via wall (pyproject.toml)
-pygments==2.18.0
+pygments==2.20.0
     # via
     #   pelican
     #   rich
