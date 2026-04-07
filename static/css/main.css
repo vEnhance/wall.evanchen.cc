@@ -11,7 +11,6 @@ body {
 p,
 ul,
 ol,
-table,
 pre,
 dl {
   margin: 0 0 20px;
@@ -41,30 +40,13 @@ pre {
   border: 1px solid #e5e5e5;
   overflow-x: auto;
 }
-
-table {
-  width: 100%;
-  border-collapse: collapse;
+code,
+pre {
+  font-size: 11pt;
 }
 
-th,
-td {
-  text-align: left;
-  padding: 5px 10px;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-dt {
-  color: #444;
-  font-weight: 700;
-}
-
-th {
-  color: #444;
-}
-
-img {
-  max-width: 100%;
+code {
+  color: #338;
 }
 
 header {
@@ -110,12 +92,6 @@ header .title {
   font-style: normal;
   padding-top: 2px;
   padding-bottom: 8px;
-}
-
-div[class="social"] a {
-  background-repeat: no-repeat;
-  background-position: 3px 6px;
-  padding-left: 25px;
 }
 
 section {
@@ -242,9 +218,4 @@ a:hover > img {
 }
 a:hover {
   text-shadow: 0 0 9px #cc7777;
-}
-
-li.month-header {
-  list-style: none;
-  margin-left: -20px;
 }
