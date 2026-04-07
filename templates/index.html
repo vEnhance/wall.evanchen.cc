@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for page in paginator.pages %}
+        <h5>
+            <a href="{{ page.permalink }}" rel="bookmark">#{{ page.slug }}
+                —
+                <abbr class="published"
+                      title="{{ page.date | date(format='%Y-%m-%dT%H:%M:%SZ') }}">
+                    {{ page.date | date(format="%B %-d, %Y") }}
+                </abbr>
+            </a>
+            by {{ config.extra.author }}
+        </h5>
+        {{ page.content | safe }}
+        <hr />
+    {% endfor %}
+    {% if paginator.number_pagers > 1 %}
+        <span class="paginator">
+            {% if paginator.previous %}<a href="{{ paginator.previous }}">(prev)</a>{% endif %}
+            Page {{ paginator.current_index }} / {{ paginator.number_pagers }}
+            {% if paginator.next %}<a href="{{ paginator.next }}">(next)</a>{% endif %}
+        </span>
+    {% endif %}
+{% endblock content %}

@@ -47,11 +47,10 @@ def get_body() -> str:
 
 def save_final_file(body: str, next_num: int) -> Path:
     """Save the edited content to the final numbered file and commit to git."""
-    header = f"""---
-slug: {next_num}
-title: #{next_num}
-date: {datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%SZ")}
----
+    header = f"""+++
+slug = "{next_num}"
+date = {datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
++++
 
 """
     content = header + body

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="keywords" content="evan chen, blog, wall" />
+        <meta name="description" content="{{ config.extra.subtitle }}" />
+        {# djlint:off #}
+        <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+        {# djlint:on #}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Quicksand:wght@300..700&family=Shadows+Into+Light&display=swap"
+              rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/monaco" rel="stylesheet">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+              crossorigin="anonymous">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, user-scalable=no">
+        <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <div class="title">
+                    <a href="/">{{ config.title }}</a>
+                </div>
+                <div class="sub-title">{{ config.extra.subtitle }}</div>
+                <p class="view">
+                    <a href="/">Wall</a>
+                    •
+                    <a href="/about/">About</a>
+                    •
+                    <a href="/archives/">List</a>
+                    •
+                    <a href="https://web.evanchen.cc">Leave</a>
+                </p>
+            </header>
+            <section>
+                {% block content %}
+                {% endblock content %}
+            </section>
+            <footer>
+                <p>
+                    <a href="/about/">
+                        <img src="/images/wall-sm.png"
+                             alt="A picture of wall"
+                             width="128"
+                             height="128" />
+                    </a>
+                </p>
+                <p>
+                    Generated with <a href="https://www.getzola.org/">Zola</a>
+                    <br />
+                    Theme based on Sundown by <a href="https://github.com/orderedlist">orderedlist</a>
+                </p>
+            </footer>
+        </div>
+        <!-- Scale fix -->
+        <script>
+      var metas = document.getElementsByTagName('meta');
+      var i;
+
+      if (navigator.userAgent.match(/iPhone/i)) {
+        for (i=0; i<metas.length; i++) {
+          if (metas[i].name == "viewport") {
+            metas[i].content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
+          }
+        }
+
+        document.addEventListener("gesturestart", gestureStart, false);
+      }
+
+      function gestureStart() {
+        for (i=0; i<metas.length; i++) {
+          if (metas[i].name == "viewport") {
+            metas[i].content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
+          }
+        }
+      }
+        </script>
+        <script defer
+                src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"
+                crossorigin="anonymous"></script>
+        <script defer
+                src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"
+                crossorigin="anonymous"
+                onload="renderMathInElement(document.body, { delimiters: [ {left: '\\[', right: '\\]', display: true}, {left: '\\(', right: '\\)', inline: true} ] });"></script>
+    </body>
+</html>
