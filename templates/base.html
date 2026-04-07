@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="chrome=1">
         <meta name="keywords" content="evan chen, blog, wall" />
-        <meta name="description" content="{{ config.extra.subtitle }}" />
+        <meta name="description" content="{{ config.description }}" />
         {# djlint:off #}
         <title>{% block title %}{{ config.title }}{% endblock title %}</title>
         {# djlint:on #}
@@ -29,7 +29,7 @@
                 <div class="title">
                     <a href="/">{{ config.title }}</a>
                 </div>
-                <div class="sub-title">{{ config.extra.subtitle }}</div>
+                <div class="sub-title">{{ config.description }}</div>
                 <p class="view">
                     <a href="{{ get_url(path='@/_index.md') }}">Wall</a>
                     •

@@ -7,7 +7,7 @@
         <h1>List by month</h1>
         {% set section = get_section(path="_index.md") %}
         {% for year, year_posts in section.pages | group_by(attribute="year") %}
-            {% for month,month_posts in year_posts | group_by(attribute="month") %}
+            {% for month, month_posts in year_posts | group_by(attribute="month") %}
                 <h3>{{ month_posts[0].date | date(format="%B %Y") }}</h3>
                 <ul>
                     {% for post in month_posts %}
