@@ -1,4 +1,5 @@
 base_url = "https://wall.evanchen.cc"
+compile_sass = true
 title = "writing on a wall"
 description = "because adulthood is lonely"
 author = "Evan Chen"
