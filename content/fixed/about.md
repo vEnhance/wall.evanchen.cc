@@ -1,7 +1,7 @@
 +++
 title = "About"
 path = "about"
-template = "about.html"
+template = "fixed/about.html"
 +++
 
 [![Artwork for "Writing on a wall". Click for full-resolution version.](/images/wall-md.png)][max]

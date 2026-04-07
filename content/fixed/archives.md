@@ -1,5 +1,5 @@
 +++
 title = "Archives"
 path = "archives"
-template = "archives.html"
+template = "fixed/archives.html"
 +++
