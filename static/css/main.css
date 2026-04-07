@@ -8,23 +8,6 @@ body {
   color: #333;
 }
 
-.grv-img {
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #222;
-  margin: 0 0 20px;
-}
 p,
 ul,
 ol,
@@ -32,30 +15,6 @@ table,
 pre,
 dl {
   margin: 0 0 20px;
-}
-
-h1,
-h2,
-h3 {
-  line-height: 1.1;
-}
-
-h1 {
-  font-size: 28px;
-  font-weight: bold;
-}
-
-h2 {
-  color: #393939;
-}
-
-h3,
-h4,
-h5,
-h6 {
-  color: #494949;
-  font-weight: bold;
-  font-size: 0.83em;
 }
 
 a {
@@ -73,18 +32,6 @@ blockquote {
   margin: 0;
   padding: 0 0 0 20px;
   font-style: italic;
-}
-
-code,
-pre {
-  font-family:
-    Monaco,
-    Bitstream Vera Sans Mono,
-    Lucida Console,
-    Terminal,
-    monospace;
-  color: #333;
-  font-size: 12pt;
 }
 
 pre {
