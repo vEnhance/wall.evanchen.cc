@@ -31,11 +31,11 @@
                 </div>
                 <div class="sub-title">{{ config.extra.subtitle }}</div>
                 <p class="view">
-                    <a href="/">Wall</a>
+                    <a href="{{ get_url(path='@/_index.md') }}">Wall</a>
                     •
-                    <a href="/about/">About</a>
+                    <a href="{{ get_url(path='@/fixed/about.md') }}">About</a>
                     •
-                    <a href="/archive/">List</a>
+                    <a href="{{ get_url(path='@/fixed/archive.md') }}">List</a>
                     •
                     <a href="https://web.evanchen.cc">Leave</a>
                 </p>
