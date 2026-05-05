@@ -2,6 +2,7 @@
 
 import datetime
 import glob
+import json
 import os
 import re
 import subprocess
@@ -114,6 +115,8 @@ def main():
         body = get_body()
         final_filepath = save_final_file(body, next_num)
         git_commit_file(final_filepath, next_num)
+        with open("latest.json", "w") as f:
+            json.dump({"number": next_num, "body": body}, f)
     except KeyboardInterrupt:
         print("\nOperation cancelled.")
         sys.exit(1)
