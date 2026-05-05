@@ -1,4 +1,4 @@
 +++
-path = "archive"
+path = "log"
 template = "fixed/archive.html"
 +++
