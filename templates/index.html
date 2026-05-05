@@ -1,12 +1,37 @@
 {% extends "base.html" %}
+{% macro page_nav(paginator) %}
+    {% if paginator.number_pagers > 1 %}
+        <nav class="post-nav">
+            {% if paginator.current_index < paginator.number_pagers %}
+                <a href="{{ paginator.last }}">|← oldest</a>
+                <a href="{{ paginator.next }}">← prev</a>
+            {% else %}
+                <span class="nav-disabled">|← oldest</span>
+                <span class="nav-disabled">← prev</span>
+            {% endif %}
+            <a href="#" class="random-link">random</a>
+            {% if paginator.current_index > 1 %}
+                <a href="{{ paginator.previous }}">next →</a>
+                <a href="{{ paginator.first }}">newest →|</a>
+            {% else %}
+                <span class="nav-disabled">next →</span>
+                <span class="nav-disabled">newest →|</span>
+            {% endif %}
+        </nav>
+    {% endif %}
+{% endmacro page_nav %}
 {% block content %}
+    {% set section = get_section(path="_index.md") %}
+    {% set oldest = section.pages | last %}
+    {% set newest = section.pages | first %}
+    {{ self::page_nav(paginator=paginator) }}
     {% for page in paginator.pages %}
         <h5>
             <a href="{{ page.permalink }}" rel="bookmark">#{{ page.slug }}
                 —
                 <abbr class="published"
                       title="{{ page.date | date(format='%Y-%m-%dT%H:%M:%SZ') }}">
-                    {{ page.date | date(format="%B %-d, %Y") }}
+                    {{ page.date | date(format="%b %-d, %Y") }}
                 </abbr>
             </a>
             by {{ config.author }}
@@ -14,11 +39,15 @@
         {{ page.content | safe }}
         <hr />
     {% endfor %}
-    {% if paginator.number_pagers > 1 %}
-        <span class="paginator">
-            {% if paginator.previous %}<a href="{{ paginator.previous }}">(prev)</a>{% endif %}
-            Page {{ paginator.current_index }} / {{ paginator.number_pagers }}
-            {% if paginator.next %}<a href="{{ paginator.next }}">(next)</a>{% endif %}
-        </span>
-    {% endif %}
+    {{ self::page_nav(paginator=paginator) }}
+    <script>
+        const minSlug = {{ oldest.slug }}, maxSlug = {{ newest.slug }};
+        document.querySelectorAll('.random-link').forEach(el => {
+            el.addEventListener('click', e => {
+                e.preventDefault();
+                const s = Math.floor(Math.random() * (maxSlug - minSlug + 1)) + minSlug;
+                window.location.href = '/' + s + '/';
+            });
+        });
+    </script>
 {% endblock content %}

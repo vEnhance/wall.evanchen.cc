@@ -8,7 +8,7 @@
         {% set section = get_section(path="_index.md") %}
         {% for year, year_posts in section.pages | group_by(attribute="year") %}
             {% for month, month_posts in year_posts | group_by(attribute="month") %}
-                <h3>{{ month_posts[0].date | date(format="%B %Y") }}</h3>
+                <h3>{{ month_posts[0].date | date(format="%b %Y") }}</h3>
                 <ul>
                     {% for post in month_posts %}
                         <li>
@@ -16,7 +16,7 @@
                                 —
                                 <abbr class="published"
                                       title="{{ post.date | date(format='%Y-%m-%dT%H:%M:%SZ') }}">
-                                    {{ post.date | date(format="%B %-d, %Y") }}
+                                    {{ post.date | date(format="%b %-d, %Y") }}
                                 </abbr>
                             </a>
                         </li>

@@ -1,24 +1,62 @@
 {% extends "base.html" %}
+{% macro post_nav(page, newest, oldest) %}
+    <nav class="post-nav">
+        {% if page.slug != oldest.slug %}
+            <a href="{{ oldest.permalink }}">|← #{{ oldest.slug }}</a>
+        {% else %}
+            <span class="nav-disabled">|← oldest</span>
+        {% endif %}
+        {% if page.higher %}
+            <a href="{{ page.higher.permalink }}">← #{{ page.higher.slug }}</a>
+        {% else %}
+            <span class="nav-disabled">← prev</span>
+        {% endif %}
+        <a href="#" class="random-link">random</a>
+        {% if page.lower %}
+            <a href="{{ page.lower.permalink }}">#{{ page.lower.slug }} →</a>
+        {% else %}
+            <span class="nav-disabled">next →</span>
+        {% endif %}
+        {% if page.slug != newest.slug %}
+            <a href="{{ newest.permalink }}">#{{ newest.slug }} →|</a>
+        {% else %}
+            <span class="nav-disabled">newest →|</span>
+        {% endif %}
+    </nav>
+{% endmacro post_nav %}
 {% block title %}
     #{{ page.slug }} | {{ config.title }}
 {% endblock title %}
 {% block content %}
+    {% set section = get_section(path="_index.md") %}
+    {% set newest = section.pages | first %}
+    {% set oldest = section.pages | last %}
     <section id="content" class="body">
+        {{ self::post_nav(page=page, newest=newest, oldest=oldest) }}
         <article>
             <div class="entry-content">
-                <h5>
+                <h2>
                     <a href="{{ page.permalink }}" rel="bookmark">#{{ page.slug }}
                         —
                         <abbr class="published"
                               title="{{ page.date | date(format='%Y-%m-%dT%H:%M:%SZ') }}">
-                            {{ page.date | date(format="%B %-d, %Y") }}
+                            {{ page.date | date(format="%b %-d, %Y") }}
                         </abbr>
                     </a>
                     by {{ config.author }}
-                </h5>
+                </h2>
                 {{ page.content | safe }}
             </div>
-            <!-- /.entry-content -->
         </article>
     </section>
+    <script>
+        const minSlug = {{ oldest.slug }}, maxSlug = {{ newest.slug }};
+        document.querySelectorAll('.random-link').forEach(el => {
+            el.addEventListener('click', e => {
+                e.preventDefault();
+                const s = Math.floor(Math.random() * (maxSlug - minSlug + 1)) + minSlug;
+                window.location.href = '/' + s + '/';
+            });
+        });
+    </script>
 {% endblock content %}
