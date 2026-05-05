@@ -116,7 +116,8 @@ def main():
         final_filepath = save_final_file(body, next_num)
         git_commit_file(final_filepath, next_num)
         with open("latest.json", "w") as f:
-            json.dump({"number": next_num, "body": body}, f)
+            data = {"number": next_num, "body": body.strip(), "sent": False}
+            json.dump(data, f, indent=2)
     except KeyboardInterrupt:
         print("\nOperation cancelled.")
         sys.exit(1)
