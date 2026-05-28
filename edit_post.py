@@ -64,8 +64,14 @@ def main():
         print("No changes detected, skipping latest.json update.")
         sys.exit(0)
 
+    try:
+        with open("latest.json") as f:
+            sent = json.load(f).get("sent", False)
+    except (FileNotFoundError, json.JSONDecodeError):
+        sent = False
+
     with open("latest.json", "w") as f:
-        data = {"number": post_num, "body": body_after.strip(), "sent": False}
+        data = {"number": post_num, "body": body_after.strip(), "sent": sent}
         json.dump(data, f, indent=2)
 
     print("Updated latest.json")
