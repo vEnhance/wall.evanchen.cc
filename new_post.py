@@ -113,6 +113,9 @@ def main():
 
     try:
         body = get_body()
+        if not body.strip():
+            print("No content found.")
+            sys.exit(2)
         final_filepath = save_final_file(body, next_num)
         git_commit_file(final_filepath, next_num)
         with open("latest.json", "w") as f:
