@@ -40,9 +40,10 @@ def launch_editor(filepath: str):
 
 
 def get_body() -> str:
-    tmp = tempfile.NamedTemporaryFile(mode="w", suffix=".md", delete=False)
-    launch_editor(tmp.name)
-    with open(tmp.name) as f:
+    with tempfile.NamedTemporaryFile(mode="w", suffix=".md", delete=False) as tmp:
+        tmp_path = tmp.name
+    launch_editor(tmp_path)
+    with open(tmp_path) as f:
         return f.read()
 
 
@@ -50,7 +51,7 @@ def save_final_file(body: str, next_num: int) -> Path:
     """Save the edited content to the final numbered file."""
     header = f"""+++
 slug = "{next_num}"
-date = {datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
+date = {datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%dT%H:%M:%SZ")}
 +++
 
 """
@@ -101,7 +102,7 @@ def git_commit_file(filepath: Path, next_num: int):
         print(f"Git operation failed: {e}")
         print(f"Error output: {e.stderr}")
         print("The file was created but not committed to git.")
-    except Exception as e:
+    except (OSError, ValueError) as e:
         print(f"Unexpected error during git operation: {e}")
         print("The file was created but not committed to git.")
 

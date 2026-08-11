@@ -54,7 +54,7 @@ def main():
     filepath, post_num = find_most_recent_file()
     print(f"Editing post #{post_num}: {filepath}")
 
-    header, body_before = parse_post(filepath)
+    _, body_before = parse_post(filepath)
 
     launch_editor(filepath)
 
