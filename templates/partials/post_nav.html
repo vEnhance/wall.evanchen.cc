@@ -1,0 +1,24 @@
+{# Expects `page`, `newest` and `oldest` in the surrounding context. #}
+<nav class="post-nav">
+    {% if page.slug != oldest.slug %}
+        <a href="{{ oldest.permalink }}">|← #{{ oldest.slug }}</a>
+    {% else %}
+        <span class="nav-disabled">|← oldest</span>
+    {% endif %}
+    {% if page.higher %}
+        <a href="{{ page.higher.permalink }}">← #{{ page.higher.slug }}</a>
+    {% else %}
+        <span class="nav-disabled">← prev</span>
+    {% endif %}
+    <a href="#" class="random-link">random</a>
+    {% if page.lower %}
+        <a href="{{ page.lower.permalink }}">#{{ page.lower.slug }} →</a>
+    {% else %}
+        <span class="nav-disabled">next →</span>
+    {% endif %}
+    {% if page.slug != newest.slug %}
+        <a href="{{ newest.permalink }}">#{{ newest.slug }} →|</a>
+    {% else %}
+        <span class="nav-disabled">newest →|</span>
+    {% endif %}
+</nav>

@@ -1,30 +1,9 @@
 {% extends "base.html" %}
-{% macro page_nav(paginator) %}
-    {% if paginator.number_pagers > 1 %}
-        <nav class="post-nav">
-            {% if paginator.current_index < paginator.number_pagers %}
-                <a href="{{ paginator.last }}">|← oldest</a>
-                <a href="{{ paginator.next }}">← prev</a>
-            {% else %}
-                <span class="nav-disabled">|← oldest</span>
-                <span class="nav-disabled">← prev</span>
-            {% endif %}
-            <a href="#" class="random-link">random</a>
-            {% if paginator.current_index > 1 %}
-                <a href="{{ paginator.previous }}">next →</a>
-                <a href="{{ paginator.first }}">newest →|</a>
-            {% else %}
-                <span class="nav-disabled">next →</span>
-                <span class="nav-disabled">newest →|</span>
-            {% endif %}
-        </nav>
-    {% endif %}
-{% endmacro page_nav %}
 {% block content %}
     {% set section = get_section(path="_index.md") %}
     {% set oldest = section.pages | last %}
     {% set newest = section.pages | first %}
-    {{ self::page_nav(paginator=paginator) }}
+    {% include "partials/page_nav.html" %}
     {% for page in paginator.pages %}
         <h5>
             <a href="{{ page.permalink }}" rel="bookmark">#{{ page.slug }}
@@ -39,7 +18,7 @@
         {{ page.content | safe }}
         <hr />
     {% endfor %}
-    {{ self::page_nav(paginator=paginator) }}
+    {% include "partials/page_nav.html" %}
     <script>
         const minSlug = {{ oldest.slug }}, maxSlug = {{ newest.slug }};
         document.querySelectorAll('.random-link').forEach(el => {

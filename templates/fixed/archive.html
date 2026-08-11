@@ -6,8 +6,12 @@
     <section id="content" class="body">
         <h1>Log by month</h1>
         {% set section = get_section(path="_index.md") %}
-        {% for year, year_posts in section.pages | group_by(attribute="year") %}
-            {% for month, month_posts in year_posts | group_by(attribute="month") %}
+        {# `group_by` yields an unordered map, so walk the keys newest-first. #}
+        {% set by_year = section.pages | group_by(attribute="year") %}
+        {% for year in by_year | keys | sort | reverse %}
+            {% set by_month = by_year[year] | group_by(attribute="month") %}
+            {% for month in by_month | keys | sort | reverse %}
+                {% set month_posts = by_month[month] %}
                 <h3>{{ month_posts[0].date | date(format="%b %Y") }}</h3>
                 <ul>
                     {% for post in month_posts %}
