@@ -67,7 +67,7 @@ def main():
     try:
         with open("latest.json") as f:
             sent = json.load(f).get("sent", False)
-    except (FileNotFoundError, json.JSONDecodeError):
+    except FileNotFoundError, json.JSONDecodeError:
         sent = False
 
     with open("latest.json", "w") as f:
