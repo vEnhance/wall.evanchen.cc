@@ -44,7 +44,7 @@ def parse_post(filepath: Path) -> tuple[str, str]:
 
 def launch_editor(filepath: Path):
     try:
-        subprocess.run(["nvim", str(filepath)], check=True)
+        subprocess.run(["vim", str(filepath)], check=True)
     except subprocess.CalledProcessError as e:
         print(f"Error launching editor: {e}")
         sys.exit(1)
