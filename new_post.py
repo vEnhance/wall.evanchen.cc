@@ -102,9 +102,11 @@ def git_commit_file(filepath: Path, next_num: int):
         print(f"Git operation failed: {e}")
         print(f"Error output: {e.stderr}")
         print("The file was created but not committed to git.")
+        sys.exit(1)
     except (OSError, ValueError) as e:
         print(f"Unexpected error during git operation: {e}")
         print("The file was created but not committed to git.")
+        sys.exit(1)
 
 
 def main():
