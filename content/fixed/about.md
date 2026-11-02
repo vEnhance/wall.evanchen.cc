@@ -25,10 +25,12 @@ So I decided I'd build my own wall, and now you're reading it.
 Welcome to my slice of life.
 I hope you enjoy the [writing on the wall](https://w.wiki/F43q).
 
-(To subscribe to updates, see the [live feed](/live) page.)
+(To subscribe to updates, see the [live feed](/live) page.
+The source repository is [vEnhance/wall.evanchen.cc][gh].)
 
 [dotfiles]: https://github.com/vEnhance/dotfiles/
 [evan]: https://web.evanchen.cc/
 [blog]: https://blog.evanchen.cc/
 [max]: /images/wall.png
 [time-lapse]: /images/time-lapse.mp4
+[gh]: https://github.com/vEnhance/wall.evanchen.cc/
