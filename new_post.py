@@ -42,9 +42,12 @@ def launch_editor(filepath: str):
 def get_body() -> str:
     with tempfile.NamedTemporaryFile(mode="w", suffix=".md", delete=False) as tmp:
         tmp_path = tmp.name
-    launch_editor(tmp_path)
-    with open(tmp_path) as f:
-        return f.read()
+    try:
+        launch_editor(tmp_path)
+        with open(tmp_path) as f:
+            return f.read()
+    finally:
+        os.unlink(tmp_path)
 
 
 def save_final_file(body: str, next_num: int) -> Path:
@@ -56,9 +59,6 @@ date = {datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%dT%H:%M:%SZ")}
 
 """
     content = header + body
-    if not body:
-        print("Aborting because no content was written")
-        sys.exit(1)
 
     final_filepath = CONTENT_PATH / f"{next_num:06d}.md"
     with open(final_filepath, "w") as f:

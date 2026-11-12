@@ -24,14 +24,4 @@
             </div>
         </article>
     </section>
-    <script>
-        const minSlug = {{ oldest.slug }}, maxSlug = {{ newest.slug }};
-        document.querySelectorAll('.random-link').forEach(el => {
-            el.addEventListener('click', e => {
-                e.preventDefault();
-                const s = Math.floor(Math.random() * (maxSlug - minSlug + 1)) + minSlug;
-                window.location.href = '/' + s + '/';
-            });
-        });
-    </script>
 {% endblock content %}
