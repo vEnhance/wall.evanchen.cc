@@ -120,6 +120,11 @@ footer {
   }
 }
 
+.source-link {
+  font-size: 14px;
+  text-align: right;
+}
+
 @media print, screen and (max-width: 960px) {
   .wrapper {
     width: auto;
