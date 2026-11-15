@@ -1,7 +1,7 @@
 +++
 title = "Live feed"
 path = "live"
-template = "fixed/page.html"
+template = "fixed/infopage.html"
 +++
 
 This microblog is really noisy, because I push things to it several times a week.
