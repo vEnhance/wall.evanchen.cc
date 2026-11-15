@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    {% include "partials/page_nav.html" %}
+    {% include "components/page_nav.html" %}
     {% for page in paginator.pages %}
         <h5>
             <a href="{{ page.permalink }}" rel="bookmark">#{{ page.slug }}
@@ -15,5 +15,5 @@
         {{ page.content | safe }}
         <hr />
     {% endfor %}
-    {% include "partials/page_nav.html" %}
+    {% include "components/page_nav.html" %}
 {% endblock content %}
