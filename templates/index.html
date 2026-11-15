@@ -1,19 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-    {% include "components/page_nav.html" %}
+    {{ <page_nav paginator={paginator} /> }}
     {% for page in paginator.pages %}
-        <h5>
-            <a href="{{ page.permalink }}" rel="bookmark">#{{ page.slug }}
-                —
-                <abbr class="published"
-                      title="{{ page.date | date(format='%Y-%m-%dT%H:%M:%SZ') }}">
-                    {{ page.date | date(format="%b %-d, %Y") }}
-                </abbr>
-            </a>
-            by {{ config.author }}
-        </h5>
+        <h5>{{ <post_link post={page} /> }} by {{ config.author }}</h5>
         {{ page.content | safe }}
         <hr />
     {% endfor %}
-    {% include "components/page_nav.html" %}
+    {{ <page_nav paginator={paginator} /> }}
 {% endblock content %}

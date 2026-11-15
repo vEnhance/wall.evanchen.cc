@@ -1,4 +1,7 @@
-{# Expects `page`, `newest` and `oldest` in the surrounding context. #}
+{% component post_nav(page) %}
+{% set wall = get_section(path="_index.md") %}
+{% set newest = wall.pages | first %}
+{% set oldest = wall.pages | last %}
 <nav class="post-nav">
     {% if page.slug != oldest.slug %}
         <a href="{{ oldest.permalink }}">|← #{{ oldest.slug }}</a>
@@ -22,3 +25,4 @@
         <span class="nav-disabled">newest →|</span>
     {% endif %}
 </nav>
+{% endcomponent post_nav %}

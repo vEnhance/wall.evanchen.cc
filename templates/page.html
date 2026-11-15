@@ -3,28 +3,12 @@
     #{{ page.slug }} | {{ config.title }}
 {% endblock title %}
 {% block content %}
-    {% set section = get_section(path="_index.md") %}
-    {% set newest = section.pages | first %}
-    {% set oldest = section.pages | last %}
-    <section id="content" class="body">
-        {% include "components/post_nav.html" %}
-        <article>
-            <div class="entry-content">
-                <h2>
-                    <a href="{{ page.permalink }}" rel="bookmark">#{{ page.slug }}
-                        —
-                        <abbr class="published"
-                              title="{{ page.date | date(format='%Y-%m-%dT%H:%M:%SZ') }}">
-                            {{ page.date | date(format="%b %-d, %Y") }}
-                        </abbr>
-                    </a>
-                    by {{ config.author }}
-                </h2>
-                {{ page.content | safe }}
-            </div>
-        </article>
-        <p class="source-link">
-            <a href="https://github.com/vEnhance/wall.evanchen.cc/blob/main/content/{{ page.relative_path }}?plain=1">View as Markdown</a>
-        </p>
-    </section>
+    {{ <post_nav page={page} /> }}
+    <article>
+        <h2>{{ <post_link post={page} /> }} by {{ config.author }}</h2>
+        {{ page.content | safe }}
+    </article>
+    <p class="source-link">
+        <a href="https://github.com/vEnhance/wall.evanchen.cc/blob/main/content/{{ page.relative_path }}?plain=1">View as Markdown</a>
+    </p>
 {% endblock content %}

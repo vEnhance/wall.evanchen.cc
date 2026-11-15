@@ -1,4 +1,4 @@
-{# Expects `paginator` in the surrounding context. #}
+{% component page_nav(paginator) %}
 {% if paginator.number_pagers > 1 %}
     <nav class="post-nav">
         {% if paginator.current_index < paginator.number_pagers %}
@@ -18,3 +18,4 @@
         {% endif %}
     </nav>
 {% endif %}
+{% endcomponent page_nav %}
