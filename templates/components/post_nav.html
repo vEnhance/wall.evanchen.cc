@@ -13,7 +13,7 @@
     {% else %}
         <span class="nav-disabled">← prev</span>
     {% endif %}
-    <a href="#" class="random-link">random</a>
+    {{ <random_link /> }}
     {% if page.lower %}
         <a href="{{ page.lower.permalink }}">#{{ page.lower.slug }} →</a>
     {% else %}

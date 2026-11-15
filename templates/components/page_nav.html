@@ -8,7 +8,7 @@
             <span class="nav-disabled">|← oldest</span>
             <span class="nav-disabled">← prev</span>
         {% endif %}
-        <a href="#" class="random-link">random</a>
+        {{ <random_link /> }}
         {% if paginator.current_index > 1 %}
             <a href="{{ paginator.previous }}">next →</a>
             <a href="{{ paginator.first }}">newest →|</a>

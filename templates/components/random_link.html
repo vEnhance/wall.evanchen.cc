@@ -1,0 +1,9 @@
+{% component random_link() %}
+{% set root = get_section(path="_index.md") %}
+{% set oldest = root.pages | last %}
+{% set newest = root.pages | first %}
+<a href="#"
+   class="random-link"
+   data-min="{{ oldest.slug }}"
+   data-max="{{ newest.slug }}">random</a>
+{% endcomponent random_link %}

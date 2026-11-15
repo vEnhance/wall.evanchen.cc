@@ -57,19 +57,7 @@
                 </p>
             </footer>
         </div>
-        {% set wall = get_section(path="_index.md") %}
-        {% set oldest = wall.pages | last %}
-        {% set newest = wall.pages | first %}
-        <script>
-            const minSlug = {{ oldest.slug }}, maxSlug = {{ newest.slug }};
-            document.querySelectorAll('.random-link').forEach(el => {
-                el.addEventListener('click', e => {
-                    e.preventDefault();
-                    const s = Math.floor(Math.random() * (maxSlug - minSlug + 1)) + minSlug;
-                    window.location.href = '/' + s + '/';
-                });
-            });
-        </script>
+        <script defer src="{{ get_url(path='random_link.js') }}"></script>
         <script defer
                 src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"
                 crossorigin="anonymous"></script>
