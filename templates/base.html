@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Quicksand:wght@300..700&family=Shadows+Into+Light&display=swap"
               rel="stylesheet">
-        <link rel="stylesheet" href="/main.css">
+        <link rel="stylesheet" href="{{ get_url(path='main.css') }}">
         <link rel="stylesheet"
               href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
               crossorigin="anonymous">
@@ -37,7 +37,7 @@
             </section>
             <footer>
                 <p>
-                    <a href="/about/">
+                    <a href="{{ get_url(path='@/fixed/about.md') }}">
                         <img src="/images/wall-sm.png"
                              alt="A picture of wall"
                              width="128"
@@ -47,7 +47,7 @@
                 <p>
                     <a href="https://list.evanchen.cc">Mail list</a>
                     •
-                    <a href="/atom.xml">Atom feed</a>
+                    <a href="{{ get_url(path='atom.xml') }}">Atom feed</a>
                     •
                     <a href="https://github.com/vEnhance/wall.evanchen.cc/">Git repo</a>
                     <br />
