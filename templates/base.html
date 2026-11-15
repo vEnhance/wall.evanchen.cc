@@ -8,7 +8,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Quicksand:wght@300..700&family=Shadows+Into+Light&display=swap"
               rel="stylesheet">
-        <link rel="stylesheet" href="{{ get_url(path='main.css') }}">
+        <link rel="stylesheet"
+              href="{{ get_url(path='main.css', cachebust=true) }}">
         <link rel="stylesheet"
               href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
               crossorigin="anonymous">
@@ -57,7 +58,7 @@
                 </p>
             </footer>
         </div>
-        <script defer src="{{ get_url(path='random_link.js') }}"></script>
+        <script defer src="{{ get_url(path='random_link.js', cachebust=true) }}"></script>
         <script defer
                 src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"
                 crossorigin="anonymous"></script>
